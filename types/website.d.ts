@@ -1,4 +1,4 @@
-interface Website {
+export type WebsiteType = {
   slug: string;
   title: string;
   description: string;
@@ -8,6 +8,5 @@ interface Website {
   tags: string[];
   colors: string[];
   scroll: string;
-  date: string; // ou Date si tu le parse plus tard
-}
-
+  date: string;
+};

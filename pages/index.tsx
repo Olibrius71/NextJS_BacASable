@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,6 +72,11 @@ export default function Home() {
           >
             Documentation
           </a>
+        </div>
+
+        <div className="flex flex-col bg-amber-400 gap-4">
+          <Link href="/home">Home</Link>
+          <Link href="/websites">Websites</Link>
         </div>
       </main>
     </div>

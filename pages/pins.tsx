@@ -1,4 +1,4 @@
-export default function Pins() {
+export default function PinsPage() {
   return (
     <div>Pins</div>
   );
