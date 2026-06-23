@@ -2,6 +2,8 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Black_Ops_One } from "next/font/google";
 import Header from "@/composants/layout/Header";
+import ScrollTop from "@/composants/layout/ScrollTop";
+import Footer from "@/composants/layout/Footer";
 
 const blackOpsOne = Black_Ops_One({
   subsets: ["latin"],
@@ -19,6 +21,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <main className={blackOpsOne.className}>
       <Component {...pageProps} />
     </main>
+    <ScrollTop />
+    <Footer />
     </div>
   );
 }
