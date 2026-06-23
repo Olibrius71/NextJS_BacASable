@@ -33,10 +33,10 @@ type WebsitePageType = {
 };
 
 export default function WebsitePage({ website }: WebsitePageType) {
-  console.log("website: ", website);
   return (
     website && (
       <div>
+        <h3>23456</h3>
         <h1>{website.title}</h1>
       </div>
     )
