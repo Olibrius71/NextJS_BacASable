@@ -13,7 +13,7 @@ export default function Header() {
             <Link href="/websites">Sites web</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contacts">Contact</Link>
           </li>
           <li className="hidden md:block flex-1">
             <form

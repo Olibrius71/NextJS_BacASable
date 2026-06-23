@@ -11,10 +11,10 @@ export default function Footer() {
             <Link href="/websites">Voir les sites web</Link>
           </li>
           <li>
-            <Link href="/mentions">Mentions Légales</Link>
+            <Link href="/pages/mentionss">Mentions Légales</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/pages/contacts">Contact</Link>
           </li>
           <li>
             <button>Gestion des cookies</button>
