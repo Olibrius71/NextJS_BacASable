@@ -1,3 +1,5 @@
+import PinsList from "@/app/pins/_components/PinsList";
+
 export const metadata = {
   title: "Page Pins",
   description: "Description Pins",
@@ -5,6 +7,9 @@ export const metadata = {
 
 export default function PinsPage() {
   return (
-    <div>PinsPage</div>
+    <main>
+      <PinsList />
+    </main>
   );
 }
+
