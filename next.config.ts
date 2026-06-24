@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
         port: '3001', // On autorise explicitement ton serveur d'images
         pathname: '/websites/**',
       },
+      {
+        protocol: "https",
+        hostname: "images.prismic.io",
+      },
     ],
   },
 };

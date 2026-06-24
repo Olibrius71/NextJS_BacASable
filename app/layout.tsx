@@ -21,6 +21,9 @@ export default function AppLayout({children}: Readonly<{
       lang="en"
       className={`h-full antialiased`}
     >
+    <head>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    </head>
     <body className="min-h-full flex flex-col bg-amber-400">
       <Header />
       <main className={blackOpsOne.className}>

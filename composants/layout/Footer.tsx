@@ -1,24 +1,25 @@
 import Link from "next/link";
 import Logo from "../ui/Logo";
+import { createClient } from "@/prismicio";
+import { isFilled } from "@prismicio/client";
 
-export default function Footer() {
+export default async function Footer() {
+  const client = createClient();
+  const menu = await client.getSingle("menu");
+
   return (
     <footer className="px-6 py-12">
       <Logo />
       <nav className="mt-8">
         <ul className="flex flex-col gap-2 text-button">
-          <li>
-            <Link href="/websites">Voir les sites web</Link>
-          </li>
-          <li>
-            <Link href="/pages/mentionss">Mentions Légales</Link>
-          </li>
-          <li>
-            <Link href="/pages/contacts">Contact</Link>
-          </li>
-          <li>
-            <button>Gestion des cookies</button>
-          </li>
+          {menu?.data?.links?.map(
+            (link, i) =>
+              isFilled.link(link) && (
+                <li key={`link-${i}`}>
+                  <Link href={link.url ?? "#"}>{link.text}</Link>
+                </li>
+              ),
+          )}
         </ul>
       </nav>
     </footer>

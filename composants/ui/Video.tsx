@@ -1,14 +1,19 @@
-type VideoType = {
-  src: string;
-  type?: string;
-};
+"use client";
 
-export default function Video({ src, type = "video/mp4" }: VideoType) {
+import { useEffect, useState } from "react";
+import { Button } from "./Button";
+
+type VideoType = {
+  id: string;
+};
+export default function Video({ id }: VideoType) {
+
+
   return (
-    <figure className="rounded-lg overflow-hidden w-full max-w-280 mt-12">
-      <video controls preload="metadata" className="w-full">
-        <source src={src} type={type} />
-      </video>
-    </figure>
+    <iframe
+      className="rounded-lg overflow-hidden w-full mt-12 aspect-video"
+      src={`https://player.vimeo.com/video/${id}`}
+      allow="encrypted-media"
+    />
   );
 }
